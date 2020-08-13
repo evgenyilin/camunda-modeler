@@ -144,14 +144,14 @@ export class App extends PureComponent {
     this.currentNotificationId = 0;
   }
 
-  createDiagram = async (type = 'bpmn') => {
+  createDiagram = async (type = 'bpmn', options) => {
 
     const {
       tabsProvider
     } = this.props;
 
     const tab = this.addTab(
-      tabsProvider.createTab(type)
+      tabsProvider.createTab(type, options)
     );
 
     await this.showTab(tab);
@@ -1582,15 +1582,15 @@ export class App extends PureComponent {
     }
 
     if (action === 'create-bpmn-diagram') {
-      return this.createDiagram('bpmn');
+      return this.createDiagram('bpmn', options);
     }
 
     if (action === 'create-dmn-diagram') {
-      return this.createDiagram('dmn');
+      return this.createDiagram('dmn', options);
     }
 
     if (action === 'create-cmmn-diagram') {
-      return this.createDiagram('cmmn');
+      return this.createDiagram('cmmn', options);
     }
 
     if (action === 'open-diagram') {

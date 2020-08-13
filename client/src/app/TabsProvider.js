@@ -212,7 +212,11 @@ export default class TabsProvider {
     return rawContents && replaceIds(rawContents, generateId);
   }
 
-  createFile(type) {
+  createFile(type, options = {}) {
+
+    const {
+      contents: fileContents
+    } = options;
 
     const counter = (
       type in createdByType
@@ -222,7 +226,7 @@ export default class TabsProvider {
 
     const name = `diagram_${counter}.${type}`;
 
-    const contents = this.getInitialFileContents(type);
+    const contents = fileContents || this.getInitialFileContents(type);
 
     return {
       name,
