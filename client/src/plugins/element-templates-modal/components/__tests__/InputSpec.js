@@ -8,19 +8,13 @@
  * except in compliance with the MIT License.
  */
 
+/* global sinon */
+
 import React from 'react';
 
 import { mount } from 'enzyme';
 
-import chai, { expect } from 'chai';
-import sinon from 'sinon';
-import sinonChai from 'sinon-chai';
-
 import Input from '../Input';
-
-chai.should();
-chai.use(sinonChai);
-
 
 
 describe('<Input>', function() {

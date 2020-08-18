@@ -8,20 +8,14 @@
  * except in compliance with the MIT License.
  */
 
+/* global sinon */
+
 import React from 'react';
 
 import { mount } from 'enzyme';
 
-import chai, { expect } from 'chai';
-import sinon from 'sinon';
-import sinonChai from 'sinon-chai';
-
 import ElementTemplatesView, { ElementTemplatesListItem, ElementTemplatesListItemEmpty } from '../ElementTemplatesModalView';
 import Dropdown from '../Dropdown';
-
-chai.should();
-chai.use(sinonChai);
-
 
 
 describe('<ElementTemplatesView>', function() {

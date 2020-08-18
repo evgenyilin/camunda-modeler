@@ -8,19 +8,13 @@
  * except in compliance with the MIT License.
  */
 
+/* global sinon */
+
 import React from 'react';
 
 import { shallow } from 'enzyme';
 
-import chai, { expect } from 'chai';
-import sinon from 'sinon';
-import sinonChai from 'sinon-chai';
-
 import ElementTemplatesModal from '../ElementTemplatesModal';
-
-chai.should();
-chai.use(sinonChai);
-
 
 
 describe('<ElementTemplatesModal>', function() {
